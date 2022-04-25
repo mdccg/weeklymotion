@@ -1,0 +1,305 @@
+@import url('./fonts.css');
+@import url('./palette.css');
+
+
+/* https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+* {
+    margin: 0;
+}
+
+header h1 a,
+main a.video {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+body {
+    font-family: 'Open Sans';
+}
+
+header,
+header #barra-pesquisa {
+    align-items: center;
+    display: flex;
+}
+
+header {
+    background-color: var(--wet-asphalt);
+    padding: 16px 48px;
+    min-height: 64px;
+}
+
+header h1 {
+    font-family: 'Fredoka One';
+    color: white;
+    font-size: 256%;
+
+    font-weight: 100;
+
+    margin-right: 48px;
+}
+
+header #barra-pesquisa {
+    background-color: white;
+    border-radius: 32px;
+    width: 256px;
+    height: 48px;
+
+    padding: 0 32px;
+}
+
+header #barra-pesquisa svg {
+    width:  32px;
+    height: 32px;
+
+    fill: var(--american-river);
+}
+
+header #barra-pesquisa input {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+
+    width:  100%;
+    height: 100%;
+
+    font-family: 'Open Sans';
+    color: var(--dracula-orchid);
+    font-size: 125%;
+}
+
+header #barra-pesquisa input::placeholder {
+    color: var(--soothing-breeze);
+}
+
+#plano-de-fundo {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+    min-height: 68.25vh;
+}
+
+#plano-de-fundo #televisao,
+#plano-de-fundo #coracao-partido {
+    width:  256px;
+    height: 256px;
+
+    fill: var(--soothing-breeze);
+}
+
+#plano-de-fundo #coracao-partido,
+#plano-de-fundo #nao-encontrado,
+#plano-de-fundo #loading {
+    display: none;
+}
+
+#plano-de-fundo span {
+    color: var(--soothing-breeze);
+    font-size: 150%;
+
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+
+    width: 70%;
+}
+
+main {
+    width: 70%;
+    margin: 72px auto;
+}
+
+main .video {
+    align-items: flex-start;
+    display: flex;
+
+    margin-bottom: 48px;
+}
+
+main .video .thumbnail {
+    width: 384px;
+    height: 192px;
+    object-fit: contain;
+    background-color: black;
+    max-width: 100%;
+    margin-right: 16px;
+}
+
+main .video .informacoes {
+    flex-direction: column;
+    display: flex;
+
+    max-width: 384px;
+}
+
+main .video .informacoes .titulo {
+    color: var(--dracula-orchid);
+    font-weight: bold;
+
+    font-size: 150%;
+}
+
+main .video .informacoes .canal {
+    margin-top: 8px;
+
+    align-items: center;
+    display: flex;
+}
+
+main .video .informacoes .canal svg {
+    width:  24px;
+    height: 24px;
+
+    fill: var(--soothing-breeze);
+
+    margin-right: 8px;
+}
+
+main .video .informacoes .nome-canal {
+    color: var(--american-river);
+    font-weight: bold;
+}
+
+main#reprodutor iframe {
+    width: 100%;
+    height: 512px;
+}
+
+main#reprodutor #informacoes {
+    margin-top: 24px;
+
+    flex-direction: column;
+    display: flex;
+
+    line-height: 1.5;
+
+    min-height: 256px;
+}
+
+main#reprodutor #informacoes #titulo {
+    color: var(--dracula-orchid);
+    font-size: 200%;
+
+    font-weight: bold;
+}
+
+main#reprodutor #informacoes #canal {
+    align-items: flex-end;
+    display: flex;
+}
+
+main#reprodutor #informacoes #nome-canal {
+    color: var(--american-river);
+    font-size: 175%;
+
+    margin-right: 16px;
+}
+
+main#reprodutor #informacoes #canal svg {
+    width:  24px;
+    height: 24px;
+
+    fill: var(--soothing-breeze);
+}
+
+main#reprodutor #informacoes #categoria {
+    margin-top: 8px;
+
+    color: var(--american-river);
+    font-size: 125%;
+    
+    font-weight: bold;
+}
+
+main#reprodutor #informacoes #nome-categoria {
+    color: var(--dracula-orchid);
+
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: black;
+    padding: 16px;
+
+    flex-direction: column;
+    display: flex;
+}
+
+footer small {
+    color: white;
+    font-size: 90%;
+
+    text-align: center;
+    line-height: 2;
+}
+
+footer small a {
+    color: inherit;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding-bottom: 24px;
+    }
+
+    header h1 {
+        margin: auto;
+    }
+
+    header #barra-pesquisa {
+        margin-top: 24px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    main .video {
+        flex-direction: column;
+    }
+
+    main .video .informacoes .titulo {
+        margin-top: 16px;
+        word-wrap: break-word;
+    }
+
+    #plano-de-fundo {
+        margin-top: 64px;
+    }
+
+    #plano-de-fundo span {
+        margin-top: 16px;
+    }
+
+    main .video .informacoes,
+    main#reprodutor #informacoes {
+        margin: 0 24px;
+    }
+
+    main#reprodutor {
+        margin: 0;
+    }
+
+    main#reprodutor iframe {
+        height: 256px;
+        margin-bottom: 16px;
+    }
+    
+    footer small {
+        font-size: 75%;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/stylesheets/styles.css" />
+  <title>Carregando...</title>
+</head>
+
+<body>
+  {{> header }}
+
+  <main id="reprodutor">
+    <iframe id="player" frameborder="0" type="text/html"
+      src="https://geo.dailymotion.com/player/x5poh.html?video=x84sh87&mute=true" allowfullscreen></iframe>
+    <div id="informacoes">
+      <span id="titulo">Carregando...</span>
+      <div id="canal">
+        <span id="nome-canal">Carregando...</span>
+        <a id="url-canal" target="_blank">
+          <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg>
+        </a>
+      </div>
+      <span id="categoria">
+        Categoria: <span id="nome-categoria">Categoria</span>
+      </span>
+    </div>
+  </main>
+
+  {{> footer }}
+
+  <script type="module" src="/src/video.ts"></script>
+</body>
+
+</html>
