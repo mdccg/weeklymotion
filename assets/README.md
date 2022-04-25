@@ -1,5 +1,9 @@
 # Tributos pelas mídias utilizadas
 
+## Paleta de cores
+
+- [Palettes | Flat UI Colors 280 handpicked colors ready for COPY & PASTE](https://flatuicolors.com/)
+
 ## Ícones
 
 - [Magnifier, search, zoom icon - Free download on Iconfinder](https://www.iconfinder.com/icons/3844432/magnifier_search_zoom_icon)
